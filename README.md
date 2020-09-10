@@ -4,6 +4,21 @@ Julia PyCall wrapper of QUIPPY for Accessing SOAP Descriptor
 This package includes a simple code that demonstrates how to access SOAP descriptor using PyCall and QUIPPY. 
 Currently, it does not provide any other descriptor or features of QUIP and QUIPPY codes but new features would like to be added in future. 
 
+## Dependencies:
+
+- [QUIPPY, QUIP and GAP](https://libatoms.github.io/GAP/installation.html)
+- [JuLIP.jl](https://github.com/JuliaMolSim/JuLIP.jl)
+- [PyCall.jl](https://github.com/JuliaPy/PyCall.jl)
+- [ASE.jl](https://github.com/JuliaMolSim/ASE.jl)
+
+## Installation:
+
+First, install QUIPPY with QUIP and GAP following these codes' [documentation](https://libatoms.github.io/GAP/installation.html)
+
+Once you have installed QUIPPY with the Python package that is used by your Julia installation, you can simply add this package to your Julia environment with the following command in Julia package manager:
+```
+] add https://github.com/DescriptorZoo/QUIP.jl.git
+```
 
 ## How to cite:
 
