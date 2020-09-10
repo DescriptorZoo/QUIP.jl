@@ -7,4 +7,4 @@ Currently, it does not provide any other descriptor or features of QUIP and QUIP
 
 ## How to cite:
 
-If you use this code and hence dependent codes [QUIPPY with QUIP](http://libatoms.github.io/QUIP/) and SOAP as part of [GAP](http://libatoms.github.io/GAP/), you need to acknowledge their licenses and cite both the codes and their papers as they are described in the codes' [webpage](http://libatoms.github.io/QUIP/).
+If you use this code and hence dependent codes [QUIPPY with QUIP](http://libatoms.github.io/QUIP/) and SOAP as part of [GAP](http://libatoms.github.io/GAP/), you need to acknowledge [their licenses and cite both the codes and their papers](http://www.libatoms.org/gap/gap_download.html) as they are described in the codes' [webpage](http://libatoms.github.io/QUIP/).
