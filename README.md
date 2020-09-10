@@ -15,9 +15,10 @@ Currently, it does not provide any other descriptor or features of QUIP and QUIP
 
 First, install QUIPPY with QUIP and GAP following these codes' [documentation](https://libatoms.github.io/GAP/installation.html)
 
-Once you have installed QUIPPY with the Python package that is used by your Julia installation, you can simply add this package to your Julia environment with the following command in Julia package manager:
+Once you have installed QUIPPY with the Python package that is used by your Julia installation, you can simply add this package to your Julia environment with the following command in Julia package manager and test whether the code produces SOAP descriptors for test system of Si:
 ```
 ] add https://github.com/DescriptorZoo/QUIP.jl.git
+] test QUIP
 ```
 
 ## How to cite:
