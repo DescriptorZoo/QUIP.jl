@@ -29,10 +29,10 @@ jobs:
     - name: Install dependencies to libatomsquip container
       run: |
         python -m pip install --upgrade pip
-        pip install -U setuptools
-        pip install -U ase
-        pip install -U matscipy
-        pip install -U julia
+        python -m pip install -U setuptools
+        python -m pip install -U ase
+        python -m pip install -U matscipy
+        python -m pip install -U julia
     - name: Run QUIP within container
       run: |
           using InteractiveUtils; versioninfo()
