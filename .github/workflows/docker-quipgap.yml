@@ -36,7 +36,7 @@ jobs:
     - name: Run QUIP within container
       run: |
           using InteractiveUtils; versioninfo()
-          using Pkg; Pkg.build("PyCall"); Pkg.activate("."); Pkg.test("QUIP")
+          using Pkg; Pkg.activate("."); Pkg.test("QUIP")
       shell: julia --color=yes --project {0}
       #shell: /bin/real/bash -c "julia --color=yes --project {0}"
       #shell: docker exec -it libatomsquip/quip /bin/real/bash -c "julia --color=yes --project {0}"
