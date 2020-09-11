@@ -26,10 +26,10 @@ jobs:
           entrypoint: /bin/real/bash
           #args: -it /bin/real/bash
     # Run in docker image
-    - name: Install dependencies to libatomsquip container
-      run: |
-        python -m pip install --upgrade pip
-        pip install -U setuptools
+    #- name: Install dependencies to libatomsquip container
+      #run: |
+      #  python -m pip install --upgrade pip
+      #  pip install -U setuptools
       #pip install -U ase
       #pip install -U matscipy
       #pip install -U julia
@@ -37,6 +37,7 @@ jobs:
       run: |
           using InteractiveUtils; versioninfo()
           using Pkg; Pkg.activate("."); Pkg.test("QUIP")
-      shell: julia --color=yes --project {0}
+      shell: docker-compose run libatomsquip/quip /bin/real/bash -c "julia --color=yes --project {0}"
+      #shell: julia --color=yes --project {0}
       #shell: /bin/real/bash -c "julia --color=yes --project {0}"
-      #shell: docker exec -it libatomsquip/quip /bin/real/bash -c "julia --color=yes --project {0}"
+
