@@ -20,11 +20,10 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     #- uses: actions/checkout@v2
-    - name: Pulling libatomsquip/quip from Docker Hub
-      uses: docker://libatomsquip/quip
+    - uses: docker://libatomsquip/quip
     # Run docker image
-    - name: Run QUIP in image
+    - name: Run QUIP within container
       run: |
           using InteractiveUtils; versioninfo()
           using Pkg; Pkg.activate("."); Pkg.test("QUIP")
-      shell: docker-compose run -it libatomsquip/quip /bin/real/bash -c "julia --color=yes --project {0}"
+      shell: docker exec -it libatomsquip/quip /bin/real/bash -c "julia --color=yes --project {0}"
