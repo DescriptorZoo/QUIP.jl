@@ -17,6 +17,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
+    container: node:quipgap
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
@@ -26,18 +27,18 @@ jobs:
           entrypoint: /bin/real/bash
           #args: -it /bin/real/bash
     # Run in docker image
-    - name: Install dependencies to libatomsquip container
-      run: |
-        python3 -m pip install --upgrade pip --user
-        python3 -m pip install -U setuptools --user
-        python3 -m pip install -U ase --user
-        python3 -m pip install -U matscipy --user
-        python3 -m pip install -U julia --user
+    #- name: Install dependencies to libatomsquip container
+    #  run: |
+    #    python3 -m pip install --upgrade pip --user
+    #    python3 -m pip install -U setuptools --user
+    #    python3 -m pip install -U ase --user
+    #    python3 -m pip install -U matscipy --user
+    #    python3 -m pip install -U julia --user
     - name: Run QUIP within container
       run: |
           using InteractiveUtils; versioninfo()
-          using Pkg; Pkg.add("PyCall"); Pkg.build("PyCall"); Pkg.activate("."); Pkg.test("QUIP")
-      #shell: docker exec -it libatomsquip/quip /bin/real/bash -c "julia --color=yes --project {0}"
-      shell: julia --color=yes --project {0}
+          using Pkg; Pkg.activate("."); Pkg.test("QUIP")
+      shell: docker exec -it node:quipgap /bin/real/bash -c "julia --color=yes --project {0}"
+      #shell: julia --color=yes --project {0}
       #shell: /bin/real/bash -c "julia --color=yes --project {0}"
 
