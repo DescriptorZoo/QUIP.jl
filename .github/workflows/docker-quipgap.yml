@@ -23,11 +23,11 @@ jobs:
     - uses: docker://libatomsquip/quip
       with:
           entrypoint: /bin/real/bash
-          args: -it /bin/real/bash
+          #args: -it /bin/real/bash
     # Run docker image
     - name: Run QUIP within container
       run: |
           using InteractiveUtils; versioninfo()
           using Pkg; Pkg.activate("."); Pkg.test("QUIP")
-      shell: /bin/real/bash -c "julia --color=yes --project {0}"
-      #shell: docker exec -it libatomsquip/quip /bin/real/bash -c "julia --color=yes --project {0}"
+      #shell: /bin/real/bash -c "julia --color=yes --project {0}"
+      shell: docker exec -it libatomsquip/quip /bin/real/bash -c "julia --color=yes --project {0}"
