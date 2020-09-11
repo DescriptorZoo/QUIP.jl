@@ -19,16 +19,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    #- uses: actions/checkout@v2
+    - uses: actions/checkout@v2
     - uses: docker://libatomsquip/quip
       with:
           entrypoint: /bin/real/bash
           #args: -it /bin/real/bash
     # Run docker image
-    - name: Test directories in container
-      run: |
-          ls -al
-      shell: /bin/real/bash
     - name: Run QUIP within container
       run: |
           using InteractiveUtils; versioninfo()
