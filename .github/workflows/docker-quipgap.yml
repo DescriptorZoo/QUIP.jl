@@ -27,4 +27,4 @@ jobs:
       run: |
           using InteractiveUtils; versioninfo()
           using Pkg; Pkg.activate("."); Pkg.test("QUIP")
-      shell: docker-compose run libatomsquip/quip /bin/real/bash -c "julia --color=yes --project {0}"
+      shell: docker-compose run -it libatomsquip/quip /bin/real/bash -c "julia --color=yes --project {0}"
