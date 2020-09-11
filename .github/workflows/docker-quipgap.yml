@@ -28,11 +28,11 @@ jobs:
     # Run in docker image
     - name: Install dependencies to libatomsquip container
       run: |
-        python -m pip install --upgrade pip
-        python -m pip install -U setuptools
-        python -m pip install -U ase
-        python -m pip install -U matscipy
-        python -m pip install -U julia
+        python3 -m pip install --upgrade pip --user
+        python3 -m pip install -U setuptools --user
+        python3 -m pip install -U ase --user
+        python3 -m pip install -U matscipy --user
+        python3 -m pip install -U julia --user
     - name: Run QUIP within container
       run: |
           using InteractiveUtils; versioninfo()
