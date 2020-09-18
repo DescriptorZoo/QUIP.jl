@@ -23,4 +23,7 @@ Once you have installed QUIPPY with the Python package that is used by your Juli
 
 ## How to cite:
 
-If you use this code and hence dependent codes [QUIPPY with QUIP](http://libatoms.github.io/QUIP/) and SOAP as it is part of [GAP](http://libatoms.github.io/GAP/) for your any academic paper or publication, you need to accept the license of [GAP suite — Non-commercial License Agreement](http://www.libatoms.org/gap/gap_download.html) and cite both the codes and their papers as they are described in the codes' [webpage](http://libatoms.github.io/QUIP/).
+If you use this code, we would appreciate if you cite the following paper:
+- Berk Onat, Christoph Ortner, James R. Kermode, 	[arXiv:2006.01915 (2020)](https://arxiv.org/abs/2006.01915)
+
+This code has a substential dependency to [QUIPPY with QUIP](http://libatoms.github.io/QUIP/) and SOAP as it is part of [GAP](http://libatoms.github.io/GAP/). For your any academic paper or publication, you need to accept the license of [GAP suite — Non-commercial License Agreement](http://www.libatoms.org/gap/gap_download.html) and cite both the codes and their papers as they are described in the codes' [webpage](http://libatoms.github.io/QUIP/).
